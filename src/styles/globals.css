@@ -70,4 +70,5 @@ body {
   .filter-button-active {
     @apply px-4 py-2 rounded-md bg-blue-600 text-white;
   }
+
 }
