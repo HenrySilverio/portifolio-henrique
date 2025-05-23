@@ -8,10 +8,10 @@ const Navbar: React.FC = () => {
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'Projects', path: '/projetos' },
-    { name: 'Experiences', path: '/experiencias' },
-    { name: 'Knowledge', path: '/conhecimentos' },
-    { name: 'Contact', path: '/contato' },
+    { name: 'Projects', path: '/projects' },
+    { name: 'Experiences', path: '/experiences' },
+    { name: 'Knowledge', path: '/knowledges' },
+    { name: 'Contact', path: '/contacts' },
   ];
 
   const isActive = (path: string) => router.pathname === path;

@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import Layout from '@/components/layout/layout.component';
+import ProfileImage from '@/components/profile-image/profile-image.component';
+import ResponsiveTest from '@/components/responsive-test/responsive-test.component';
 
 export default function Home() {
   return (
@@ -74,8 +76,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
-      {/* Responsive testing component - remove in production */}
+
       <ResponsiveTest />
     </Layout>
   );
