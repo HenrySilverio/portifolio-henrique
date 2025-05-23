@@ -6,14 +6,14 @@ import ResponsiveTest from '@/components/responsive-test/responsive-test.compone
 
 export default function Home() {
   return (
-    <Layout title="Início | Portfolio">
+    <Layout title="Home | Portfolio">
       <section className="py-16">
         <div className="container-wrapper">
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="w-full md:w-1/3">
               <div className="mx-auto w-48 h-48">
                 <ProfileImage 
-                  src="/profile.jpg" 
+                  src="/FrontEnd-Engineer.jpeg"
                   alt="Henrique Silverio" 
                   size={192}
                   className="mx-auto"
