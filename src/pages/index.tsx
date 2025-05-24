@@ -2,6 +2,33 @@ import Layout from '@/components/layout/layout.component';
 import Link from 'next/link';
 import { SiGithub, SiLinkedin } from 'react-icons/si';
 
+const highlightedProjects = [
+  {
+    id: 1,
+    title: 'Forest 🌲',
+    description:
+      'Forest is an immersive, nature-inspired landing page built entirely with Tailwind CSS and enhanced with animations, dynamic weather via Open-Meteo API, and responsive design techniques. It simulates a real-world forest retreat website, ideal for eco-tourism, glamping, or digital detox experiences.',
+    image: '/forest.png',
+    link: 'https://thenewforestexperience.net/',
+  },
+  {
+    id: 2,
+    title: 'Uberlândia Cultural Platform 🎭🎨🎵',
+    description:
+      'The Uberlândia Cultural Platform was developed as part of the Innovation and Entrepreneurship Program linked to the Software Engineering course’s extension activities. The platform centralizes information about tourist attractions, cultural events, and provides a dedicated space for independent artists to showcase their work.',
+    image: '/uberlandia-cultural.png',
+    link: 'https://cultural-platform-uberlandia.henrique-silverio.com/',
+  },
+  {
+    id: 3,
+    title: 'Pillar Ui',
+    description:
+      'This project involves building a scalable Design System using Next.js, TypeScript, Tailwind CSS, and Storybook. Based on Atomic Design principles, we’ll create reusable components—from design tokens to complex UI elements—fully documented and themeable.',
+    image: '/pillar-ui.png',
+    link: '',
+  },
+];
+
 export default function Home() {
   return (
     <Layout title="Home | Portfolio">
@@ -71,14 +98,35 @@ export default function Home() {
         <div className="container-wrapper">
           <h2 className="section-title">Highlighted projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((item) => (
-              <div key={item} className="project-card">
-                <div className="project-image"></div>
-                <div className="project-content">
-                  <h3 className="text-xl font-semibold mb-2">Projeto</h3>
-                  <p className="text-gray-300">
-                    Apenas uma pequena descrição do projeto.
-                  </p>
+            {highlightedProjects.map((project) => (
+              <div key={project.id} className="project-card">
+                <a
+                  href={project.link || '#'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block overflow-hidden rounded-lg"
+                >
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-48 object-cover"
+                  />
+                </a>
+                <div className="project-content mt-4">
+                  <h3 className="text-xl font-semibold mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-300">{project.description}</p>
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 inline-block text-indigo-500 hover:underline"
+                    >
+                      See Project
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
@@ -88,7 +136,7 @@ export default function Home() {
               href="/projetos"
               className="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors"
             >
-              Ver todos os projetos
+              See All Projects
             </Link>
           </div>
         </div>
