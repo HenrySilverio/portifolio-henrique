@@ -70,7 +70,7 @@ export default function ContactsView() {
                 <div className="flex flex-col items-center">
                   <FaPhone size={32} className="mb-3 text-gray-300" />
                   <h3 className="text-lg font-medium mb-1">Phone</h3>
-                  <p className="text-gray-300">(34) 98441-6591</p>
+                  <p className="text-gray-300">+55 (34) 9 8441-6591</p>
                 </div>
               </div>
             </div>
