@@ -1,0 +1,12 @@
+{
+  "projects": {
+    "default": "myportifolio-45a13"
+  },
+  "targets": {
+    "myportifolio-45a13": {
+      "hosting": {
+        "portfolio": ["henrique-silverio"]
+      }
+    }
+  }
+}
